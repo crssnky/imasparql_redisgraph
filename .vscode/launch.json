@@ -1,0 +1,67 @@
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'imasparql_redisgraph'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=imasparql_redisgraph"
+        ],
+        "filter": {
+          "name": "imasparql_redisgraph",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'imasparql_redisgraph'",
+      "sourceLanguages": [
+        "rust"
+      ],
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=imasparql_redisgraph",
+          "--package=imasparql_redisgraph"
+        ],
+        "filter": {
+          "name": "imasparql_redisgraph",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'imasparql_redisgraph'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=imasparql_redisgraph",
+          "--package=imasparql_redisgraph"
+        ],
+        "filter": {
+          "name": "imasparql_redisgraph",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

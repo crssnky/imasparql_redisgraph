@@ -1,0 +1,14 @@
+[package]
+name = "imasparql_redisgraph"
+version = "0.1.0"
+authors = ["crssnky <vindicare28@yahoo.co.jp>"]
+
+[dependencies]
+redis = "0.15.1"
+redisgraph = "0.1.0"
+serde = "*"
+serde_json = "*"
+serde_derive = "*"
+ureq = { version = "*", features = ["json"] }
+url = "2.1.0"
+percent-encoding = "2.1.0"
