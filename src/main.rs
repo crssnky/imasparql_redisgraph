@@ -30,9 +30,8 @@ fn get_unit(separator: &'static str) -> Vec<Bindings> {
 
     SELECT (group_concat(?unit;separator='{}')as ?units) ?idol
     where {{
-      ?s  schema:name ?idol;
+      ?s  rdfs:label ?idol;
           schema:memberOf/schema:name ?unit
-      filter(str(lang(?idol))='en')
     }}group by ?idol",
     separator
   );
